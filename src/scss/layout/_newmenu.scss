@@ -96,7 +96,7 @@
       position: absolute;
       top: 130px;
       right: 0%;
-<<<<<<< HEAD
+
       @keyframes bounce-animation-delay {
         from {
           transform: translate(180px, 0px);
@@ -106,10 +106,6 @@
         }
       }
       animation: bounce-animation-delay 1s 500ms infinite alternate-reverse;
-=======
-      transform: translateX(180px);
-      @include bounce(180px, 500ms);
->>>>>>> d447f66b17be3d0bfa18e39cf9bc0d0a61856020
     }
 
     @include mobile {
