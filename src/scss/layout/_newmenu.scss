@@ -6,7 +6,11 @@
   }
 
   @include mobile {
-    background: linear-gradient(to bottom, $secondary-color 250px, $white 200px);
+    background: linear-gradient(
+      to bottom,
+      $secondary-color 250px,
+      $white 200px
+    );
   }
 }
 
@@ -71,7 +75,7 @@
       position: absolute;
       top: 48px;
       left: 0%;
-      transform: translateX(-54px);
+      @include bounce(-54px, 0ms);
     }
 
     @include mobile {
@@ -84,7 +88,7 @@
       position: absolute;
       top: 130px;
       right: 0%;
-      transform: translateX(180px);
+      @include bounce(180px, 500ms);
     }
 
     @include mobile {

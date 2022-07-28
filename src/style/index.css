@@ -443,7 +443,15 @@ legend {
     position: absolute;
     top: 48px;
     left: 0%;
-    transform: translateX(-54px);
+    animation: bounce-animation 1s infinite 0ms alternate-reverse;
+  }
+  @keyframes bounce-animation {
+    from {
+      transform: translate(-54px, 0px);
+    }
+    to {
+      transform: translate(-54px, 10px);
+    }
   }
 }
 @media (max-width: 767px) {
@@ -456,7 +464,15 @@ legend {
     position: absolute;
     top: 130px;
     right: 0%;
-    transform: translateX(180px);
+    animation: bounce-animation 1s infinite 500ms alternate-reverse;
+  }
+  @keyframes bounce-animation {
+    from {
+      transform: translate(180px, 0px);
+    }
+    to {
+      transform: translate(180px, 10px);
+    }
   }
 }
 @media (max-width: 767px) {
