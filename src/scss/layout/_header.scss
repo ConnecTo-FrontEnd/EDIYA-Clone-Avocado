@@ -1,12 +1,17 @@
 // 헤더
-@use './../utils' as *;
-@use './../components' as *;
+@use "./../utils" as *;
+@use "./../components" as *;
 
-header{
+header {
   padding: 18px;
   @include flexbox($j: space-between);
 
-  .logo{
+  &.header {
+    max-width: 760px;
+    @include autoMargin;
+  }
+
+  .logo {
     width: 140px;
     height: 14px;
     background-image: url(./../../../src/assets/images/brand.svg);
@@ -16,54 +21,55 @@ header{
   }
 }
 
-@include mobile{
-
-  .open-navigation{
+@include mobile {
+  .open-navigation {
     width: 18px;
     height: 14px;
     border: 0;
     background: transparent;
     position: relative;
 
-    span{
-      display:inline-block;
+    span {
+      display: inline-block;
       width: 18px;
       height: 2px;
       background: $gray;
       border-radius: 5px;
     }
-    
-    .navigation-icon{
-      &-top{
+
+    .navigation-icon {
+      &-top {
         @include posLeft(0, 0);
       }
 
-      &-middle{
+      &-middle {
         @include posCenterY;
         left: 0;
       }
 
-      &-bottom{
+      &-bottom {
         position: absolute;
-        bottom:0; left:0;
+        bottom: 0;
+        left: 0;
       }
     }
   }
 
-  .navigation{
+  .navigation {
     display: none;
   }
 }
 
-@include desktop{
-  .open-navigation{
+@include desktop {
+  .open-navigation {
     display: none;
   }
 
-  .navigation{
+  .navigation {
     @include flexbox($j: space-between);
     gap: $spacing-sm;
     font-size: $text-lg;
     color: $blue;
   }
 }
+  

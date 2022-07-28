@@ -1,7 +1,7 @@
-@use './../utils' as *;
-@use './../components' as *;
+@use "./../utils" as *;
+@use "./../components" as *;
 
-footer{
+footer {
   padding: 25px 0 30px;
   @include autoMargin;
   @include flexbox($d: column);
@@ -9,51 +9,54 @@ footer{
   color: $lightGray;
   text-align: center;
 
-  .business{
+  .business {
     padding: 0 26px;
     @include flexbox($j: center, $w: wrap);
     gap: $spacing-base;
     font-size: $text-sm;
     border-bottom: 1px solid rgba(97, 97, 97, 0.5);
 
-    li:nth-child(2){
+    li:nth-child(2) {
       color: $white;
     }
 
-    @include mobile{
+    @include mobile {
       padding-bottom: 25px;
     }
 
-    @include desktop{
+    @include desktop {
       padding-bottom: $spacing-lg;
     }
   }
 }
 
-.footer-logo{
+.footer-logo {
   margin-top: 25px;
   margin-bottom: 17px;
 }
-
-.address-wrapper{
+address {
+  max-width: 740px;
+  @include autoMargin;
+}
+.address-wrapper {
   @include flexbox($j: center, $w: wrap);
   gap: $spacing-xs;
   font-size: $text-sm;
   margin-bottom: $spacing-base;
   padding: 0 22px;
 
-  li{
-    span{
+  li {
+    span {
       font-weight: $weight-bold;
     }
   }
 
-  @include desktop{
+  @include desktop {
     padding: 0 65px;
   }
 }
 
-small{
+small {
   font-size: $text-xs;
   font-weight: $weight-bold;
 }

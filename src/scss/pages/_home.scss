@@ -1,0 +1,270 @@
+@use "./../utils/" as *;
+
+.main-wrapper {
+  @include desktop {
+    background: linear-gradient(to bottom, #bae5fb82 260px, $white 245px);
+  }
+
+  @include mobile {
+    background: linear-gradient(
+      to bottom,
+      $secondary-color 250px,
+      $white 200px
+    );
+  }
+}
+
+.main {
+  @include flexbox(column, flex-start, center);
+  @include autoMargin;
+  @include paddingY(50px);
+  position: relative;
+  max-width: 740px;
+  height: 505px;
+  margin-bottom: 15px;
+  text-align: center;
+
+  @include mobile {
+    @include paddingY(42px);
+    height: 387px;
+    margin-bottom: 19px;
+  }
+
+  .menu {
+    display: inline-block;
+    order: 1;
+    padding: 8px 24px;
+    margin-top: 30px;
+    border: 1px solid $primary-color;
+
+    @include mobile {
+      margin-top: 15px;
+      padding: 8px 18px;
+    }
+  }
+
+  .slogan-en {
+    font-size: 32px;
+    span {
+      font-weight: $weight-bold;
+      color: $primary-color;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+
+  .slogan-en::after {
+    @include autoMargin;
+    @include marginY(30px);
+    content: "";
+    display: block;
+    width: 40px;
+    height: 0.5px;
+    background-color: $black;
+
+    @include mobile {
+      @include marginY(15px);
+    }
+  }
+
+  .menu-item1 {
+    @include desktop {
+      position: absolute;
+      top: 48px;
+      left: 0%;
+      @keyframes bounce-animation {
+        from {
+          transform: translate(-54px, 0px);
+        }
+        to {
+          transform: translate(-54px, 10px);
+        }
+      }
+      animation: bounce-animation 1s infinite alternate-reverse;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .menu-item2 {
+    @include desktop {
+      position: absolute;
+      top: 130px;
+      right: 0%;
+      @keyframes bounce-animation-delay {
+        from {
+          transform: translate(180px, 0px);
+        }
+        to {
+          transform: translate(180px, 10px);
+        }
+      }
+      animation: bounce-animation-delay 1s 500ms infinite alternate-reverse;
+    }
+
+    @include mobile {
+      @include posCenterX();
+      width: 225px;
+      bottom: 0;
+    }
+  }
+}
+
+body {
+  @include desktop {
+    background: $snow;
+  }
+}
+
+.content-wrapper {
+  position: relative;
+
+  @include flexbox;
+  @include boxSizeMax;
+
+  @include mobile {
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .video-marketing,
+    .notice,
+    .news {
+      width: 100%;
+    }
+
+    .video-marketing {
+      height: 100%;
+    }
+
+    .notice-article {
+      flex-grow: 1;
+    }
+
+    .news {
+      position: relative;
+      height: 100%;
+      top: 0;
+    }
+  }
+
+  @include desktop {
+    padding: 62px 0;
+  }
+}
+
+.video-marketing {
+  width: 365px;
+  height: 205px;
+}
+
+.wrapper-iframe {
+  @include responseIframe;
+}
+
+.notice {
+  @include flexbox;
+  position: relative;
+  width: 375px;
+  height: 105px;
+
+  &-title {
+    width: 125px;
+    padding: $spacing-base;
+    background: linear-gradient(to bottom right, #263d83, #102457);
+    color: $white;
+    font-weight: $weight-bold;
+    font-size: $text-xl;
+  }
+
+  &-article {
+    width: 250px;
+    background: $white;
+    padding: $spacing-base;
+    color: $black;
+  }
+
+  &-article-title {
+    color: $primary-color;
+    font-size: $text-lg;
+    font-weight: $weight-bold;
+  }
+
+  &-article-date {
+    font-size: $text-xs;
+  }
+
+  &-article-content {
+    font-size: $text-sm;
+    @include textEllipsis;
+  }
+
+  &-button-prev,
+  &-button-next {
+    position: absolute;
+    top: 79px;
+    padding: 0 3px;
+    background: 0;
+    font-size: $text-xs;
+  }
+
+  &-button-prev {
+    left: 84px;
+  }
+
+  &-button-next {
+    left: 99px;
+  }
+}
+
+.news {
+  @include flexbox($d: column);
+  @include posRight(134px, 0);
+  width: 375px;
+  height: 100px;
+  background: $primary-color;
+  padding: $spacing-base;
+  color: $white;
+
+  &-title {
+    font-size: $text-xl;
+    font-weight: $weight-bold;
+    margin-bottom: $spacing-base;
+  }
+
+  &-item {
+    margin: 3px 0;
+    @include flexbox;
+  }
+
+  &-link,
+  &-date {
+    font-size: $text-sm;
+  }
+
+  &-link {
+    flex-grow: 1;
+    width: 272px;
+    margin-right: 5px;
+    @include textEllipsis;
+  }
+
+  &-more {
+    font-size: $text-sm;
+
+    @include posRight($spacing-base, $spacing-base);
+  }
+}
+
+.home-button {
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white;
+  text-align: center;
+  line-height: 100%;
+  color: $white;
+}

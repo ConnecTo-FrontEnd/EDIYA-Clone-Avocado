@@ -1,0 +1,20 @@
+@use "../utils/" as *;
+.news-media {
+  h2 {
+    font-size: $spacing-lg;
+  }
+  p {
+    font-size: $text-md;
+  }
+}
+
+.news-media-table {
+  border-top: 2px solid #24388d;
+  border-bottom: 2px solid #24388d;
+  thead {
+    border-bottom: 1px solid #24388d;
+  }
+  th {
+    border-bottom: 1px solid #24388d;
+  }
+}

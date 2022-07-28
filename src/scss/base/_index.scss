@@ -1,3 +1,7 @@
 @forward "./normalize";
 @forward "./reset";
 @forward "./default";
+
+* {
+  font-size: 16px;
+}
