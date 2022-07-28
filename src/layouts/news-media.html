@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
+<<<<<<< HEAD
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -133,3 +134,166 @@
 <!-- footer -->
 </body>
 </html>
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이디야 뉴스</title>
+  </head>
+  <body>
+    <!-- header -->
+    <ul class="news-tab">
+      <li><a class="news-a" id="notices">공지사항</a></li>
+      <li class="selected"><a class="news-a" id="media">언론 속 이디야</a></li>
+      <li><a class="news-a" id="advertisement">홍보영상</a></li>
+      <li><a class="news-a" id="prize">수상내역</a></li>
+    </ul>
+    <section class="news-media">
+      <h2>언론 속 이디야</h2>
+      <p class="news-media-description">이디야의 소식을 전해드립니다</p>
+      <div class="news-media-search">
+        <select name="searchId" id="searchId">
+          <option value="name">이름</option>
+          <option value="description">내용</option>
+        </select>
+        <label for="media-search"></label>
+        <input type="search" />
+        <button>Search</button>
+      </div>
+      <table class="news-media-table">
+        <thead>
+          <tr>
+            <th>순서</th>
+            <th>내용</th>
+            <th>날짜</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="board-media-999">
+            <th>999</th>
+            <th>
+              <img src="../assets/images/news-thumbnail.jpg" alt="" />
+              <p class="board-media-text-title">
+                [MTN] 이디야커피, 조각케이크 2종 출시 디저트 강화
+              </p>
+              <p class="board-media-text-description">
+                이디야커피가 조각 케이크 신제품 2종과 기존 조각 케이크 3종을
+                리뉴얼해 출시하여 디저트 케이크 라인업을 강화하였다
+              </p>
+            </th>
+            <th>
+              <time datetime="2022-07-28">2022-07-28</time>
+            </th>
+          </tr>
+          <tr id="board-media-998">
+            <th>998</th>
+            <th>
+              <img src="../assets/images/ediya-table-thumb.jpg" alt="" />
+              <p class="board-media-text-title">
+                [매일경제] 이디야커피, 공정거리조정원 '착한 프렌차이즈' 선정
+              </p>
+              <p class="board-media-text-description">
+                이디야커피는 가맹점을 위해 상생정책을 시행한 노력을 인정받아
+                25일 공정거래조정원이 인증하는 '착한 프렌
+              </p>
+            </th>
+            <th>
+              <time datetime="2022-07-28">2022-07-28</time>
+            </th>
+          </tr>
+          <tr id="board-media-997">
+            <th>997</th>
+            <th>[매일경제] 이디야커피, 공정거래조정원</th>
+            <th>
+              <img src="../assets/images/ediya-table-thumb.jpg" alt="" />
+              <p class="board-media-text-title">
+                [매일경제] 이디야커피, 공정거리조정원 '착한 프렌차이즈' 선정
+              </p>
+              <p class="board-media-text-description">
+                이디야커피는 가맹점을 위해 상생정책을 시행한 노력을 인정받아
+                25일 공정거래조정원이 인증하는 '착한 프렌
+              </p>
+            </th>
+          </tr>
+          <tr id="board-media-996">
+            <th>996</th>
+            <th>[MTN] 이디야커피, 조각케이크 출시</th>
+            <th>
+              <img src="../assets/images/ediya-table-thumb.jpg" alt="" />
+              <p class="board-media-text-title">
+                [매일경제] 이디야커피, 공정거리조정원 '착한 프렌차이즈' 선정
+              </p>
+              <p class="board-media-text-description">
+                이디야커피는 가맹점을 위해 상생정책을 시행한 노력을 인정받아
+                25일 공정거래조정원이 인증하는 '착한 프렌
+              </p>
+            </th>
+          </tr>
+          <tr id="board-media-995">
+            <th>995</th>
+            <th>
+              <img src="../assets/images/ediya-table-thumb.jpg" alt="" />
+              <p class="board-media-text-title">
+                [매일경제] 이디야커피, 공정거리조정원 '착한 프렌차이즈' 선정
+              </p>
+              <p class="board-media-text-description">
+                이디야커피는 가맹점을 위해 상생정책을 시행한 노력을 인정받아
+                25일 공정거래조정원이 인증하는 '착한 프렌
+              </p>
+            </th>
+            <th>
+              <time datetime="2022-07-28">2022-07-28</time>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="news-media-pagination">
+        <button class="news-media-prev">
+          <img
+            src="../assets/images/button-prev.svg"
+            alt="언론속 이디야 게시판 이전페이지로 이동"
+          />
+        </button>
+        <button class="news-media-next">
+          <img
+            src="../assets/images/button-next.svg"
+            alt="언론속 이디야 게시판 다음페이지로 이동"
+          />
+        </button>
+        <li>
+          <button href="/">1</button>
+        </li>
+        <li>
+          <a href="/">2</a>
+        </li>
+        <li aria-current="page">
+          <button href="/">3</button>
+        </li>
+        <li>
+          <button href="/">4</button>
+        </li>
+        <li>
+          <button href="/">5</button>
+        </li>
+        <li>
+          <button href="/">6</button>
+        </li>
+        <li>
+          <button href="/">7</button>
+        </li>
+        <li>
+          <button href="/">8</button>
+        </li>
+        <li>
+          <button href="/">9</button>
+        </li>
+        <li>
+          <button href="/">10</button>
+        </li>
+      </ul>
+    </section>
+    <!-- footer -->
+  </body>
+</html>
+>>>>>>> b959393d14229b3fb4f22d9d29cee0633e15dafb

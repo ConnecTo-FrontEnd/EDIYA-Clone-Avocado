@@ -161,3 +161,15 @@
   grid-template-rows: auto;
   gap: rem($gap);
 }
+
+@mixin bounce($translateX: 0px, $delayTime: 0ms) {
+  @keyframes bounce-animation {
+    from {
+      transform: translate($translateX, 0px);
+    }
+    to {
+      transform: translate($translateX, 10px);
+    }
+  }
+  animation: bounce-animation 1s infinite $delayTime alternate-reverse;
+}
