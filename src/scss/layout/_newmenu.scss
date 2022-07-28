@@ -75,7 +75,15 @@
       position: absolute;
       top: 48px;
       left: 0%;
-      @include bounce(-54px, 0ms);
+      @keyframes bounce-animation {
+        from {
+          transform: translate(-54px, 0px);
+        }
+        to {
+          transform: translate(-54px, 10px);
+        }
+      }
+      animation: bounce-animation 1s infinite alternate-reverse;
     }
 
     @include mobile {
@@ -88,7 +96,15 @@
       position: absolute;
       top: 130px;
       right: 0%;
-      @include bounce(180px, 500ms);
+      @keyframes bounce-animation-delay {
+        from {
+          transform: translate(180px, 0px);
+        }
+        to {
+          transform: translate(180px, 10px);
+        }
+      }
+      animation: bounce-animation-delay 1s 500ms infinite alternate-reverse;
     }
 
     @include mobile {
