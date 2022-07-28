@@ -34,7 +34,10 @@ footer{
   margin-top: 25px;
   margin-bottom: 17px;
 }
-
+address{
+  max-width: 740px;
+  @include autoMargin;
+}
 .address-wrapper{
   @include flexbox($j: center, $w: wrap);
   gap: $spacing-xs;

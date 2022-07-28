@@ -6,6 +6,11 @@ header{
   padding: 18px;
   @include flexbox($j: space-between);
 
+  &.header{
+    max-width: 760px;
+    @include autoMargin;
+  }
+
   .logo{
     width: 140px;
     height: 14px;
