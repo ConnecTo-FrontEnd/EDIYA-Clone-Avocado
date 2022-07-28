@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="./src/style/index.css" />
     <title>EDIYA Avocado</title>
   </head>
   <body>
@@ -24,12 +24,24 @@
         <li><a href="/">매장찾기</a></li>
       </ul>
     </header>
-    <main class="main">
-      <h2 class="sr-only">이디야 신메뉴</h2>
-      <a href="/" class="menu">메뉴 보기</a>
-      <p class="slogan-en" lang="en">ALWAYS BESIDE YOU EDIYA COFFEE</p>
-      <p class="slogan-ko">늘 당신 곁에, 이디야 커피의 새로운 메뉴를 맛보세요.</p>
-    </main>
+    <div class="main-wrapper">
+      <main class="main">
+        <h2 class="sr-only">이디야 신메뉴</h2>
+        <a href="/" class="menu">메뉴 보기</a>
+        <p class="slogan-en" lang="en">ALWAYS BESIDE YOU <span>EDIYA COFFEE</span></p>
+        <p class="slogan-ko">늘 당신 곁에, 이디야 커피의 새로운 메뉴를 맛보세요.</p>
+        <img
+          class="menu-item1"
+          src="./src/assets/images/cheese-cookie.png"
+          alt="로투스 쿠키가 올라간 치즈에 쿠키했대 쉐이크"
+        />
+        <img
+          class="menu-item2"
+          src="./src/assets/images/choco-rice.png"
+          alt="진득한 초콜릿이 올라간 초코 묻고 더블 쉐이크와 쌀과자가 올라간 밥대신 라이스 쉐이크"
+        />
+      </main>
+    </div>
     <article class="video-marketing">
       <h2 class="sr-only">이디야 홍보 영상</h2>
       <div class="wrapper-iframe"><iframe width="" height="" src="https://youtu.be/UGPo0RqhbKU"></iframe></div>
