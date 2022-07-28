@@ -1,5 +1,11 @@
 @use "./../utils" as *;
 
+body{
+  @include desktop{
+    background: $snow;
+  }
+}
+
 .content-wrapper{
   position: relative;
 
