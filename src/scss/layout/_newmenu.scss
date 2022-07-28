@@ -88,12 +88,8 @@
     }
 
     @include mobile {
-      content: url(./../assets/images/choco-rice-img.png);
-      @include autoMargin;
+      @include posCenterX();
       width: 225px;
-      order: 1;
-      top: initial;
-      right: initial;
       bottom: 0;
     }
   }
