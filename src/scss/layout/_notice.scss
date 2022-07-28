@@ -1,0 +1,156 @@
+@use "./../utils" as *;
+
+.content-wrapper{
+  position: relative;
+
+  @include flexbox;
+  @include boxSizeMax;
+
+  @include mobile{
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .video-marketing, .notice, .news{
+      width: 100%;
+    }
+
+    .video-marketing{
+      height: 100%;
+    }
+
+    .notice-article{
+      flex-grow: 1;
+    }
+
+    .news{
+      position: relative;
+      height: 100%;
+      top: 0;
+    }
+  }
+}
+
+.video-marketing{
+  width: 365px;
+  height: 205px;
+}
+
+.wrapper-iframe{
+  @include responseIframe;
+}
+
+.notice{
+  @include flexbox;
+  position: relative;
+  width: 375px;
+  height: 105px;
+
+  &-title{
+    width: 125px;
+    padding: $spacing-base;
+    background: linear-gradient(to bottom right, #263D83, #102457);
+    color: $white;
+    font-weight: $weight-bold;
+  }
+
+  &-article{
+    width: 250px;
+    background: $white;
+    padding: $spacing-base;
+    color: $black;
+  }
+
+  &-article-title{
+    color: $primary-color;
+    font-size: $text-lg;
+    font-weight: $weight-bold;
+  }
+
+  &-article-date{
+    font-size: $text-xs;
+  }
+
+  &-article-content{
+    font-size: $text-sm;
+    @include textEllipsis;
+  }
+
+  &-button-prev, &-button-next{
+    position: absolute;
+    top: 79px;
+    padding: 0 3px;
+    background: 0;
+    font-size: $text-xs;
+  }
+
+  &-button-prev{
+    left: 84px;
+  }
+
+  &-button-next{
+    left: 99px;
+  }
+}
+
+.news{
+  @include flexbox($d: column);
+  @include posRight(105px, 0);
+  width: 375px;
+  height: 100px;
+  background: $primary-color;
+  padding: $spacing-base;
+  color: $white;
+
+  &-title{
+    font-weight: $weight-bold;
+    margin-bottom: $spacing-base;
+  }
+
+  &-item{
+    margin: 3px 0;
+    @include flexbox;
+  }
+
+  &-link, &-date{
+    font-size: $text-sm;
+  }
+
+  &-link{
+    flex-grow: 1;
+    width: 272px;
+    margin-right: 5px;
+    @include textEllipsis;
+  }
+
+  &-more{
+    font-size: $text-sm;
+    
+    @include posRight($spacing-base, $spacing-base);
+  }
+}
+
+.home-button {
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white;
+  text-align: center;
+  line-height: 100%;
+  color: $white;
+}
+
+// @include mobile{
+//   .video-marketing{
+//     width: 100%;
+//   }
+
+//   .notice, .news{
+//     position: relative;
+//     width: 100vw;
+//   }
+
+//   .notice{
+//     &-article{
+//       flex-grow: 1;
+//     }
+//   }
+// }
