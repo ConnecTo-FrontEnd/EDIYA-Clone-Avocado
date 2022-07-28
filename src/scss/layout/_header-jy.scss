@@ -1,0 +1,69 @@
+// 헤더
+@use './../utils' as *;
+@use './../components' as *;
+
+header{
+  padding: 18px;
+  @include flexbox($j: space-between);
+
+  .logo{
+    width: 140px;
+    height: 14px;
+    background-image: url(./../../../src/assets/images/brand.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+@include mobile{
+
+  .open-navigation{
+    width: 18px;
+    height: 14px;
+    border: 0;
+    background: transparent;
+    position: relative;
+
+    span{
+      display:inline-block;
+      width: 18px;
+      height: 2px;
+      background: $gray;
+      border-radius: 5px;
+    }
+    
+    .navigation-icon{
+      &-top{
+        @include posLeft(0, 0);
+      }
+
+      &-middle{
+        @include posCenterY;
+        left: 0;
+      }
+
+      &-bottom{
+        position: absolute;
+        bottom:0; left:0;
+      }
+    }
+  }
+
+  .navigation{
+    display: none;
+  }
+}
+
+@include desktop{
+  .open-navigation{
+    display: none;
+  }
+
+  .navigation{
+    @include flexbox($j: space-between);
+    gap: $spacing-sm;
+    font-size: $text-lg;
+    color: $blue;
+  }
+}
