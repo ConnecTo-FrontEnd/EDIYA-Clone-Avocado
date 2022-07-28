@@ -1,11 +1,11 @@
 # 🥑 팀 아보카도 EDIYA 클론 코딩
 
-![원본](https://velog.velcdn.com/images/jiseung/post/305c4318-6020-4940-931d-18cec19ed20e/image.png)
+<img style="width: 400px;" src="https://velog.velcdn.com/images/jiseung/post/305c4318-6020-4940-931d-18cec19ed20e/image.png" />
 
 EDIYA 메인 페이지를 구현하는 프로젝트
 
-원본 페이지: https://seulbinim.github.io/EDIYA/  
-팀 아보카도 페이지: https://connecto-frontend.github.io/EDIYA-Clone-Avocado/
+☕️ 원본 페이지: https://seulbinim.github.io/EDIYA/  
+🥑 팀 아보카도 페이지: https://connecto-frontend.github.io/EDIYA-Clone-Avocado/
 
 ## 🛠 기술 스택
 
@@ -47,7 +47,7 @@ HTML, SCSS
 
 #### 메인페이지 마크업 및 초기 세팅<br>
 
-![마크업](https://velog.velcdn.com/images/jiseung/post/cfc7f5d7-d18f-4aaf-b0e7-28e8bd158979/image.png)
+<img style="width: 400px;" src="https://velog.velcdn.com/images/jiseung/post/cfc7f5d7-d18f-4aaf-b0e7-28e8bd158979/image.png" />
 
 - 백남헌 : Header, Footer 마크업
 - 김민석 : 메인 콘텐츠 마크업
@@ -60,15 +60,15 @@ HTML, SCSS
 
 #### 메인 페이지 스타일 및 뉴스, 수상내역 페이지 마크업<br>
 
-![1차 완성](https://velog.velcdn.com/images/jiseung/post/aa7d6a09-addd-4c99-8ca0-fdc31c7a6414/image.png)
+<img style="width: 200px; " src="https://velog.velcdn.com/images/jiseung/post/aa7d6a09-addd-4c99-8ca0-fdc31c7a6414/image.png" />
 
-![1차 완성](https://velog.velcdn.com/images/jiseung/post/c009369a-d23c-465b-950e-5b137b6edbd6/image.png)
+<img align="left" style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/c009369a-d23c-465b-950e-5b137b6edbd6/image.png" />
 
-![1차 완성](https://velog.velcdn.com/images/jiseung/post/84de42d6-7990-4787-a390-a9abd3cd2bbe/image.png)
+<img style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/84de42d6-7990-4787-a390-a9abd3cd2bbe/image.png" />
 
-![뉴스 페이지 마크업](https://velog.velcdn.com/images/jiseung/post/cde5ca9e-3ef5-495a-9010-806081ac362f/image.png)
+<img align="left" style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/cde5ca9e-3ef5-495a-9010-806081ac362f/image.png" />
 
-![수상 내역 마크업](https://velog.velcdn.com/images/jiseung/post/7969458c-5a45-412a-bf79-70dce2415315/image.png)
+<img style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/7969458c-5a45-412a-bf79-70dce2415315/image.png" />
 
 - 박지윤 : Header, Footer 스타일
 - 강지승 : 메인 콘텐츠 상단 스타일
@@ -79,7 +79,7 @@ HTML, SCSS
 > SASS 변수, mixins를 활용해 반응형 스타일 완성.<br>
 > git 관련 협의가 없어서 merge 시 충돌을 해결하느라 어려움을 겪음
 
-#### 병합 과정에서 겪은 트러블 슈팅
+#### 🐛 병합 과정에서 겪은 트러블 슈팅
 
 이슈 : 병합된 파일에서 서로 스타일이 다르게 보였다!
 원인 : 각자 설정된 기본 브라우저 폰트 사이즈(rem)이 달랐는데(16px vs 20px), 따로 기본값을 지정해주지 않아서 생긴 일이었음을 알게 되었다.
@@ -87,7 +87,7 @@ HTML, SCSS
 
 <br>
 
-#### 메인 페이지 스타일 및 리팩토링<br>
+#### ♻️ 메인 페이지 스타일 및 리팩토링<br>
 
 - 어느정도 완성된 스타일로 리팩토링 진행
 - SCSS Structure에 대해 스터디
