@@ -379,7 +379,6 @@ header.header {
 }
 header .logo {
   width: 140px;
-  height: 14px;
   background-image: url(./../../../src/assets/images/brand.svg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -758,7 +757,7 @@ small {
   align-items: stretch;
   flex-wrap: nowrap;
   position: absolute;
-  top: 8.375rem;
+  top: 10.4375rem;
   right: 0rem;
   width: 375px;
   height: 100px;

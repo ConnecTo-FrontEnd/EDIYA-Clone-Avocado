@@ -223,7 +223,7 @@ body {
 
 .news {
   @include flexbox($d: column);
-  @include posRight(134px, 0);
+  @include posRight(167px, 0);
   width: 375px;
   height: 100px;
   background: $primary-color;
