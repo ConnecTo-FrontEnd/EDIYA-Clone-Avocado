@@ -1,55 +1,107 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style/index.css" />
-  <title>EDIYA Avocado</title>
-</head>
-<body>
-  <main class="main">
-    <h2 class="sr-only">
-      이디야 메뉴
-      <a href="/" class="menu">메뉴보기</a>
-    </h2>
-    <p class="slogan-en" lang="en">ALWAYS BESIDE YOU EDIYA COFFEE</p>
-    <p class="slogan-ko">늘 당신 곁에, 이디야 커피의 새로운 메뉴를 맛보세요.</p>
-  </main>
-  <section class="notice">
-    <h2 class="notice-title">
-      NOTICE
-    </h2>
-    <article class="notice-article">
-      <h3 class="notice-article-title">이디야멤버스가 새로워집니다.</h3>
-      <p class="notice-article-content">이디야멤버스에 새로운 기능이 추가됩니다. 추가되는 고객등급제, 이디야카드, 스마트 ...</p>
-      <time datetime="2022-07-28" class="notice-article-date">2022.07.28</time>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style/index.css" />
+    <title>EDIYA Avocado</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo"></h1>
+      <button class="open-navigation">
+        <span class="navigation-icon-top"></span>
+        <span class="navigation-icon-middle"></span>
+        <span class="navigation-icon-bottom"></span>
+      </button>
+      <ul class="navigation">
+        <li><a href="/">이디야 디자인</a></li>
+        <li><a href="/">로그인</a></li>
+        <li><a href="/">회원가입</a></li>
+        <li><a href="/">이디야 음료</a></li>
+        <li><a href="/">이디야 뉴스</a></li>
+        <li><a href="/">매장찾기</a></li>
+      </ul>
+    </header>
+    <main class="main">
+      <h2 class="sr-only">이디야 신메뉴</h2>
+      <a href="/" class="menu">메뉴 보기</a>
+      <p class="slogan-en" lang="en">ALWAYS BESIDE YOU EDIYA COFFEE</p>
+      <p class="slogan-ko">늘 당신 곁에, 이디야 커피의 새로운 메뉴를 맛보세요.</p>
+    </main>
+    <article class="video-marketing">
+      <h2 class="sr-only">이디야 홍보 영상</h2>
+      <div class="wrapper-iframe"><iframe width="" height="" src="https://youtu.be/UGPo0RqhbKU"></iframe></div>
     </article>
-    <button type="button" class="button notice-button-prev"></button>
-    <button type="button" class="button notice-button-next"></button>
-  </section>
-  <section class="news">
-    <h2 class="news-title">
-      NEWS
-    </h2>
-    <ul class="news-list">
-      <li class="news-item">
-        <a href="/" target="_blank" rel="noopener noreferrer" class="news-link">[MTN] 이디야커피, 조각 케이크 2종 출시… 디저트 강화</a>
-        <time datetime="2022-07-28" class="news-date">2022-07-28</time>
-      </li>
-      <li class="news-item">
-        <a href="/" target="_blank" rel="noopener noreferrer" class="news-link">[아시아경제] 이디야커피, '비니스트 커피믹스 ...</a>
-        <time datetime="2022-07-28" class="news-date">2022-07-28</time>
-      </li>
-    </ul>
-    <a href="/" class="button news-more"></a>
-  </section>
-  <article class="video-marketing">
-    <h2 class="sr-only">이디야 홍보 영상</h2>
-    <div class="wrapper-iframe">
-      <iframe width="" height="" src="https://youtu.be/UGPo0RqhbKU">
-      </iframe>
-    </div>
-  </article>
-</body>
+    <section class="notice">
+      <h2 class="notice-title">NOTICE</h2>
+      <article class="notice-article">
+        <p class="notice-article-title">이디야멤버스가 새로워집니다.</p>
+        <time datetime="2022-07-28" class="notice-article-date">2022.07.28</time>
+        <p class="notice-article-content">
+          이디야멤버스에 새로운 기능이 추가됩니다. 추가되는 고객등급제, 이디야카드, 스마트 ...
+        </p>
+      </article>
+      <button type="button" class="button notice-button-prev"></button>
+      <button type="button" class="button notice-button-next"></button>
+    </section>
+    <section class="news">
+      <h2 class="news-title">NEWS</h2>
+      <ul class="news-list">
+        <li class="news-item">
+          <a href="/" target="_blank" rel="noopener noreferrer" class="news-link"
+            >[MTN] 이디야커피, 조각 케이크 2종 출시… 디저트 강화</a
+          >
+          <time datetime="2022-07-28" class="news-date">2022-07-28</time>
+        </li>
+        <li class="news-item">
+          <a href="/" target="_blank" rel="noopener noreferrer" class="news-link"
+            >[아시아경제] 이디야커피, '비니스트 커피믹스 ...</a
+          >
+          <time datetime="2022-07-28" class="news-date">2022-07-28</time>
+        </li>
+      </ul>
+      <a href="/" class="button news-more"></a>
+    </section>
+    <footer class="footer">
+      <ul class="business">
+        <li><a href="/">개인정보처리방침</a></li>
+        <li><a href="/">멤버스 이용약관</a></li>
+        <li><a href="/">가맹 안내</a></li>
+        <li><a href="/">대량쿠폰 구매</a></li>
+        <li><a href="/">채용안내</a></li>
+        <li><a href="/">고객의 소리</a></li>
+        <li><a href="/">사이트맵</a></li>
+        <li><a href="/">점주의 방</a></li>
+      </ul>
+      <a href="/" class="footer-logo">
+        <img src="./src/assets/images/brand-dark.svg" alt="" />
+      </a>
+      <address>
+        <ul class="address-wrapper">
+          <li>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</li>
+          <li>
+            <a href="tel:02-543-6467"><span>TEL</span> : 02-543-6467</a>
+          </li>
+          <li>
+            <a href="tel:02-543-7191"><span>FAX</span> : 02-543-7191</a>
+          </li>
+          <li>
+            <span> 사업자등록번호 </span>
+            : 107-86-16302
+          </li>
+          <li>
+            <span> 통신판매업 신고 </span>
+            : 강남 제 002519호
+          </li>
+          <li>
+            <span> 대표이사 </span>
+            : 문창기
+          </li>
+        </ul>
+      </address>
+      <small> &copy; 2017 EDIYA COFFEE COMPANY.ALL RIGHTS RESERVED..</small>
+    </footer>
+  </body>
 </html>

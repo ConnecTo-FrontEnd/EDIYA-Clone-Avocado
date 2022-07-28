@@ -1,5 +1,5 @@
 // ? 숨김 콘텐츠를 위한 믹스인
-@mixin a11yHidden {
+@mixin sr-only {
   width: 1px;
   height: 1px;
   margin: 1px;
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-.a11yHidden,
+.sr-only,
 legend {
-  @include a11yHidden;
+  @include sr-only;
 }
