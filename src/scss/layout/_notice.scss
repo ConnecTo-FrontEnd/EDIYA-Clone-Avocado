@@ -28,6 +28,10 @@
       top: 0;
     }
   }
+
+  @include desktop{
+    padding: 62px 0;
+  }
 }
 
 .video-marketing{
@@ -94,7 +98,7 @@
 
 .news{
   @include flexbox($d: column);
-  @include posRight(105px, 0);
+  @include posRight(167px, 0);
   width: 375px;
   height: 100px;
   background: $primary-color;
@@ -137,20 +141,3 @@
   line-height: 100%;
   color: $white;
 }
-
-// @include mobile{
-//   .video-marketing{
-//     width: 100%;
-//   }
-
-//   .notice, .news{
-//     position: relative;
-//     width: 100vw;
-//   }
-
-//   .notice{
-//     &-article{
-//       flex-grow: 1;
-//     }
-//   }
-// }
