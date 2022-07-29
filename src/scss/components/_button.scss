@@ -1,0 +1,10 @@
+@use "./../utils/" as *;
+
+.home-button {
+  width: rem(16px);
+  height: rem(16px);
+  border: 1px solid $white;
+  text-align: center;
+  line-height: rem(16px);
+  color: $white;
+}

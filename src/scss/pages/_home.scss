@@ -2,15 +2,11 @@
 
 .main-wrapper {
   @include desktop {
-    background: linear-gradient(to bottom, #bae5fb82 260px, $white 245px);
+    background: linear-gradient(to bottom, $secondary-color rem(260px), $white rem(245px));
   }
 
   @include mobile {
-    background: linear-gradient(
-      to bottom,
-      $secondary-color 250px,
-      $white 200px
-    );
+    background: linear-gradient(to bottom, $secondary-color rem(250px), $white rem(200px));
   }
 }
 
@@ -19,32 +15,32 @@
   @include autoMargin;
   @include paddingY(50px);
   position: relative;
-  max-width: 740px;
-  height: 505px;
-  margin-bottom: 15px;
+  max-width: rem(740px);
+  height: rem(505px);
+  margin-bottom: rem(15px);
   text-align: center;
 
   @include mobile {
     @include paddingY(42px);
-    height: 387px;
-    margin-bottom: 19px;
+    height: rem(387px);
+    margin-bottom: rem(19px);
   }
 
   .menu {
     display: inline-block;
     order: 1;
-    padding: 8px 24px;
-    margin-top: 30px;
+    padding: rem(8px) rem(24px);
+    margin-top: rem(30px);
     border: 1px solid $primary-color;
 
     @include mobile {
-      margin-top: 15px;
-      padding: 8px 18px;
+      margin-top: rem(15px);
+      padding: rem(8px) rem(18px);
     }
   }
 
   .slogan-en {
-    font-size: 32px;
+    font-size: rem(32px);
     span {
       font-weight: $weight-bold;
       color: $primary-color;
@@ -61,8 +57,8 @@
     @include marginY(30px);
     content: "";
     display: block;
-    width: 40px;
-    height: 0.5px;
+    width: rem(40px);
+    height: rem(0.5px);
     background-color: $black;
 
     @include mobile {
@@ -72,9 +68,7 @@
 
   .menu-item1 {
     @include desktop {
-      position: absolute;
-      top: 48px;
-      left: 0%;
+      @include posLeft(48px, 0);
       @keyframes bounce-animation {
         from {
           transform: translate(-54px, 0px);
@@ -93,9 +87,7 @@
 
   .menu-item2 {
     @include desktop {
-      position: absolute;
-      top: 130px;
-      right: 0%;
+      @include posRight(130px, 0);
       @keyframes bounce-animation-delay {
         from {
           transform: translate(180px, 0px);
@@ -109,7 +101,7 @@
 
     @include mobile {
       @include posCenterX();
-      width: 225px;
+      width: rem(225px);
       bottom: 0;
     }
   }
@@ -128,8 +120,7 @@ body {
   @include boxSizeMax;
 
   @include mobile {
-    flex-direction: column;
-    flex-wrap: wrap;
+    @include flexbox($d: column, $w: wrap);
 
     .video-marketing,
     .notice,
@@ -147,8 +138,8 @@ body {
 
     .news {
       position: relative;
-      height: 100%;
       top: 0;
+      height: 100%;
     }
   }
 
@@ -213,19 +204,19 @@ body {
   }
 
   &-button-prev {
-    left: 84px;
+    left: rem(84px);
   }
 
   &-button-next {
-    left: 99px;
+    left: rem(99px);
   }
 }
 
 .news {
   @include flexbox($d: column);
   @include posRight(167px, 0);
-  width: 375px;
-  height: 100px;
+  width: rem(375px);
+  height: rem(100px);
   background: $primary-color;
   padding: $spacing-base;
   color: $white;
@@ -237,8 +228,8 @@ body {
   }
 
   &-item {
-    margin: 3px 0;
     @include flexbox;
+    margin: 3px 0;
   }
 
   &-link,
@@ -247,10 +238,10 @@ body {
   }
 
   &-link {
-    flex-grow: 1;
-    width: 272px;
-    margin-right: 5px;
     @include textEllipsis;
+    flex-grow: 1;
+    width: rem(272px);
+    margin-right: rem(5px);
   }
 
   &-more {
@@ -258,13 +249,4 @@ body {
 
     @include posRight($spacing-base, $spacing-base);
   }
-}
-
-.home-button {
-  width: 16px;
-  height: 16px;
-  border: 1px solid $white;
-  text-align: center;
-  line-height: 100%;
-  color: $white;
 }
