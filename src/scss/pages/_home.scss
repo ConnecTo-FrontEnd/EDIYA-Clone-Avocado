@@ -153,13 +153,13 @@ body {
   }
 
   @include desktop {
-    padding: 62px 0;
+    padding: rem(62px) 0;
   }
 }
 
 .video-marketing {
-  width: 365px;
-  height: 205px;
+  width: rem(365px);
+  height: rem(205px);
 }
 
 .wrapper-iframe {
@@ -169,11 +169,11 @@ body {
 .notice {
   @include flexbox;
   position: relative;
-  width: 375px;
-  height: 105px;
+  width: rem(375px);
+  height: rem(105px);
 
   &-title {
-    width: 125px;
+    width: rem(125px);
     padding: $spacing-base;
     background: linear-gradient(to bottom right, #263d83, #102457);
     color: $white;
@@ -182,7 +182,7 @@ body {
   }
 
   &-article {
-    width: 250px;
+    width: rem(250px);
     background: $white;
     padding: $spacing-base;
     color: $black;
@@ -206,8 +206,8 @@ body {
   &-button-prev,
   &-button-next {
     position: absolute;
-    top: 79px;
-    padding: 0 3px;
+    top: rem(79px);
+    padding: 0 rem(3px);
     background: 0;
     font-size: $text-xs;
   }
