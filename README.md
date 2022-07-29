@@ -11,11 +11,11 @@ EDIYA 메인 페이지를 구현하는 프로젝트
 
 HTML, SCSS
 
-## 🗓 진행 기간
+## 🥑 아보카도 숙성 기간
 
 2022.07.27 - 2022.07.29
 
-## 📝 진행 과정
+## 🥑 아보카도 숙성 과정
 
 ### 2022.07.27
 
@@ -45,49 +45,83 @@ HTML, SCSS
 
 ### 2022.07.28
 
-#### 메인페이지 마크업 및 초기 세팅<br>
-
+<details>
+<summary> (눌러서 상세보기) 메인페이지 마크업 및 초기 세팅</summary>
+  
 <img style="width: 400px;" src="https://velog.velcdn.com/images/jiseung/post/cfc7f5d7-d18f-4aaf-b0e7-28e8bd158979/image.png" />
-
-- 백남헌 : Header, Footer 마크업
-- 김민석 : 메인 콘텐츠 마크업
-- 강지승, 박지윤 : SASS 초기 세팅 및 스타일 리셋. 자주 쓰이는 변수 및 믹스인 세팅
+  
+  
+- 백남헌 : Header, Footer 마크업.   
+- 김민석 : 메인 콘텐츠 마크업.   
+- 강지승, 박지윤 : SASS 초기 세팅 및 스타일 리셋. 자주 쓰이는 변수 및 믹스인 세팅.   
   <br>
 
 > 완성된 마크업을 두고 토의를 통해 더 나은 방향으로 마크업을 개선시켜 나감. (마크업 순서, 시맨틱 태그 등을 고려)
 
-<br>
+</details>
 
-#### 메인 페이지 스타일 및 뉴스, 수상내역 페이지 마크업<br>
+<details>
+  <summary> (눌러서 상세보기) 메인 페이지 스타일 및 뉴스, 수상내역 페이지 마크업</summary>
+  
+  <img style="width: 50%; " src="https://velog.velcdn.com/images/jiseung/post/aa7d6a09-addd-4c99-8ca0-fdc31c7a6414/image.png" />
 
-<img style="width: 200px; " src="https://velog.velcdn.com/images/jiseung/post/aa7d6a09-addd-4c99-8ca0-fdc31c7a6414/image.png" />
+  <img align="left" style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/c009369a-d23c-465b-950e-5b137b6edbd6/image.png" />
 
-<img align="left" style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/c009369a-d23c-465b-950e-5b137b6edbd6/image.png" />
+  <img style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/84de42d6-7990-4787-a390-a9abd3cd2bbe/image.png" />
 
-<img style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/84de42d6-7990-4787-a390-a9abd3cd2bbe/image.png" />
+  <img align="left" style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/cde5ca9e-3ef5-495a-9010-806081ac362f/image.png" />
 
-<img align="left" style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/cde5ca9e-3ef5-495a-9010-806081ac362f/image.png" />
+  <img style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/7969458c-5a45-412a-bf79-70dce2415315/image.png" />
 
-<img style="width: 40%;" src="https://velog.velcdn.com/images/jiseung/post/7969458c-5a45-412a-bf79-70dce2415315/image.png" />
+  - 박지윤 : Header, Footer 스타일    
+  - 강지승 : 메인 콘텐츠 상단 스타일    
+  - 김민석 : 메인 콘텐츠 하단 스타일    
+  - 백남헌 : 메인 콘텐츠 애니메이션, 뉴스/수상내역 페이지 마크업    
+    <br>
 
-- 박지윤 : Header, Footer 스타일
-- 강지승 : 메인 콘텐츠 상단 스타일
-- 김민석 : 메인 콘텐츠 하단 스타일
-- 백남헌 : 메인 콘텐츠 애니메이션, 뉴스/수상내역 페이지 마크업
-  <br>
+  > SASS 변수, mixins를 활용해 반응형 스타일 완성.   <br>
+  > git 관련 협의가 없어서 merge 시 충돌을 해결하느라 어려움을 겪음
+  
+</details>
 
-> SASS 변수, mixins를 활용해 반응형 스타일 완성.<br>
-> git 관련 협의가 없어서 merge 시 충돌을 해결하느라 어려움을 겪음
+#### ✅ 중간 점검
+
+1. `img` vs `background`   
+: 장식용 이미지인가, 보여주고 설명해야 할 이미지인가? 기준을 **검색되고 싶은지**에 두자!
+
+2. `ul` vs `table`     
+: `table`은 데이터를 나열하는 경우 좋으나, 상세 내용이 있는 경우 `ul`, `li`, `aria-current`를 사용해 정리하는 것이 좋다.
+
+3. 화면 크기에 따른 이미지 변화     
+: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture">`<picture>` 태그</a>를 사용해 화면 크기에 따른 srcset을 제공하자. 
+
+* 팀 아보카도 도입기
+```html
+<picture>
+          <source
+            media="(max-width: 787px)"
+            srcset="./src/assets/images/choco-rice-img.png"
+          />
+          <img
+            class="menu-item2"
+            src="./src/assets/images/choco-rice.png"
+            alt="진득한 초콜릿이 올라간 초코 묻고 더블 쉐이크와 쌀과자가 올라간 밥대신 라이스 쉐이크"
+          />
+</picture>
+```
 
 #### 🐛 병합 과정에서 겪은 트러블 슈팅
 
-이슈 : 병합된 파일에서 서로 스타일이 다르게 보였다!
-원인 : 각자 설정된 기본 브라우저 폰트 사이즈(rem)이 달랐는데(16px vs 20px), 따로 기본값을 지정해주지 않아서 생긴 일이었음을 알게 되었다.
-해결 : html에 font-size를 지정해 동일하게 스타일을 지정했다.
+- 이슈     
+  : 병합된 파일에서 서로 스타일이 다르게 보였다!<br>
+- 원인     
+  : 각자 설정된 기본 브라우저 폰트 사이즈(rem)이 달랐는데(16px vs 20px), 따로 기본값을 지정해주지 않아서 생긴 일이었음을 알게 되었다.<br>
+- 해결     
+  : html에 font-size를 지정해 동일하게 스타일을 지정했다.<br>
 
 <br>
 
-#### ♻️ 메인 페이지 스타일 및 리팩토링<br>
+#### ♻ 메인 페이지 스타일 및 리팩토링<br>
 
 - 어느정도 완성된 스타일로 리팩토링 진행
 - SCSS Structure에 대해 스터디
@@ -102,6 +136,10 @@ HTML, SCSS
 
 > Q. 폴더 구조를 공부하면서 왜 모든 SCSS 파일을 하나의 main.scss로 묶어서 하나의 CSS 파일을 형성하는가에 대해 의문이 생겼다. HTML별로 필요한 CSS만 불러들이는게 빠르지 않을까?<br><br>
 > A. HTML 파일이 여러개더라도 단 하나의 CSS 파일을 연결시키자. 처음 불러들인 스타일시트를 캐시해두기 때문에 보다 빠른 렌더링이 가능해진다.
+
+<details>
+  <summary> (눌러서 상세보기) ♻ Refactoring ... ♻ </summary>
+  
 
 **리팩토링 전**
 
@@ -166,3 +204,6 @@ HTML, SCSS
     │       ├── _unit.scss
     │       └── _variable.scss
 ```
+
+  
+</details>
